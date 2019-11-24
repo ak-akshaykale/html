@@ -1,0 +1,49 @@
+<html>
+        <head>
+            <title>Calculator</title>
+            <script src="js/cal.js">
+            </script>
+        </head>
+        <body>
+            <table>
+            <h1>Calculator</h1>
+            <tr>
+                <td>
+            <label>N1: </label>
+                </td>
+                <td>
+                    <input type="number" id="no1"><span id="msg1"></span><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <label>N2: </label>
+                </td>
+                <td>
+                    <input type="number" id="no2"><span id="msg2"></span><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Operator:</label>
+                </td>>
+                 <td>
+                     <select type="select" id="op" value="">
+                    <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option><br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Calculate" onclick="cal()"><br>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><label>Result is <span id="result"></span></label><img src="" id="mood"></img>
+                    </td>
+            </tr>
+            </table>
+        </body>
+</html>

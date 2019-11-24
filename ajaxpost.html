@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            AJAX WITH POST
+        </title>
+    </head>
+    <body>
+        <h1>THIS IS POST secure Transfer<span id="ur"></span></h1>
+        <input type="text"  id="txt">
+        <input type="button" value="add name" onclick="callpost()">        
+    </body>
+    <script>
+        function callpost()
+        {
+            cd = document.getElementById("txt")
+            ur = document.getElementById("ur");
+            sajx = new XMLHttpRequest();
+            sajx.open("POST","fetch.php",true)
+            sajx.setRequestHeader("content-type","application/x-www-form-urlencoded")
+            sajx.onreadystatechange=function(){
+            if(sajx.readystate==4)
+            {
+            sdata=sajx.responseText;
+            ur.innerHTML=sdata;
+            console.log(sdata)
+            }
+            }
+            sajx.send("ur="+cd.value)
+        }
+    </script>
+</html>

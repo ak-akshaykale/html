@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>This is Ajax Programming</title>
+    </head>
+    <body>
+        <h1>Hello user, <span id="user"></span></h1>
+        <input type="button" value="Get User From Server" onclick="call()">
+    </body>
+    <script>
+        function call(){
+        user=document.getElementById("user");    
+        method="get"
+        url="fetch.php"
+        async=true;
+        ajx = new XMLHttpRequest()
+        ajx.open(method,url,async);
+        ajx.onreadystatechange=function(){
+            console.log(ajx.readyState)
+            if(ajx.readyState==4)
+            console.log(ajx.responseText);
+            user.innerHTML=ajx.responseText
+        }
+        ajx.send(null);
+        }
+    </script>
+</html>

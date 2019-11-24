@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Add Fruit
+        </title>
+    </head>
+    <body>
+        <label>Fruit</label>
+        <input type="text" id="txt"><br>
+        <input type="button" value="Add" onclick="add()">
+        <select name="select" id="fruit" value="">
+            <option id="fr" value="Apple">Apple</option>
+        </select>
+    </body>
+    <script type="text/javascript">
+        function add()
+        {
+            selectbar = document.getElementById("fruit");
+            txt = document.getElementById("txt");
+            ds=document.createElement("option");
+            ds.value=txt.value
+            ds.innerHTML=txt.value
+            selectbar.add(ds)
+            
+        }
+    </script>
+</html>
